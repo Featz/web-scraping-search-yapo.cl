@@ -10,9 +10,6 @@ def get_soup(url):
 	soup = BeautifulSoup(response.text, 'lxml')
 	return soup
 
-def format_price(price):
-	return int(price[1:8].replace('.',''))
-
 def send_mail(body):
 	server = SMTP('smtp.gmail.com', 587)
 	server.ehlo()
